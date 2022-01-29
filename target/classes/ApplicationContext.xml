@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="sit.int204.beans.Car">
+    <constructor-arg name="brand" value="BenzE250D" />
+    <constructor-arg name="chasisNumber" value="ZM25487ER" />
+    <constructor-arg name="engine" ref="GE01" />
+    </bean>
+
+    <bean id="1KD-FTV" class="sit.int204.beans.DieselEngine">
+        <constructor-arg value="2980" type="int" />
+    </bean>
+    <bean id="GE01" class="sit.int204.beans.GasolineEngine">
+        <constructor-arg value="1200" type="int"/>
+    </bean>
+
+    <bean name="carX" class="sit.int204.beans.Car">
+        <property name="brand" value="Toyota" />
+        <property name="chasisNumber" value="ZE3197-9485M" />
+        <property name="engine" ref="1KD-FTV" />
+    </bean>
+
+</beans>
